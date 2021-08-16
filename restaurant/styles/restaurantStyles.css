@@ -1,0 +1,77 @@
+/* Form styling */
+
+/*
+Creator: Igor Dalvi
+Date created: 2021-08-09
+Date last modified: 2021-08-15
+*/
+
+header, footer {
+    background-color: #bb703f;
+    height: 100px;
+    text-align: center;
+    padding: 10px 10px 60px 10px;
+    margin-top: 0px;
+}
+
+header {
+    font-family: 'Kanit', sans-serif;
+    color: rgb(95, 42, 42);
+    font-size: 2em;
+    vertical-align: center;
+}
+
+h1{
+    vertical-align: center;
+}
+
+nav {
+    border-top: 3px dashed #546a7b;
+    border-bottom: 3px dashed #546a7b;
+    margin-top: 4px;
+    font-size: 20px;
+}
+
+nav p {
+    padding-left: 515px;
+}
+nav a {
+    background-color: #77512d;
+    color: #e0cfb8;
+    padding: 8px;
+    border: thin solid #0d1f2d;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 20px 20px;
+    width: 100px;
+    float:left;
+}
+
+nav a:hover {
+    background-color: #77512d;
+    color: #e0cfb8; 
+    font-weight: bold;
+}
+nav a:active {
+    background-color: #bd8652;
+    font-weight: normal;
+    color:#bb703f
+}
+nav a:visited {
+    background-color: #b66519;
+    color: #631103; 
+}
+
+.clear-float {
+    clear:both;
+}
+
+.right-content {
+    float:left;
+    width: 100%
+}
+
+body {
+    background-color: rgb(223, 202, 163);
+}
