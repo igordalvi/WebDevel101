@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-    <head> 
-        <title>Show Grill - Contact</title>	
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Show Grill - Contact</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Kanit:wght@500&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Kanit:wght@500&display=swap" rel="stylesheet">
         <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css"/>
         <style>
             nav {
@@ -31,14 +31,14 @@
             form input, select option, textarea {
                 background-color: rgb(235, 224, 213);
             }
-            
+
             #submit {
                 background-color: rgb(194, 137, 81);
             }
 
         </style>
-    </head> 
-    
+    </head>
+
     <body>
         <main>
             <header>
@@ -46,10 +46,9 @@
             </header>
 
             <nav>
-                <p><a href="restaurant_index.html">Home</a></p> 
-                <p><a href="rest_menu.html">Menu</a></p> 
-                <p><a href="rest_contact.html">Contact Us</a></p> 
-                <div class="clear-float"></div>
+                <div id="item1"><a href="restaurant_index - v2.html">Home</a></div>
+                <div id="item2"><a href="rest_menu.html">Menu</a></div>
+                <div id="item3"><a href="rest_contact.html">Contact Us</a></div>
             </nav>
 
             <section>
@@ -57,10 +56,10 @@
                 <form action="submit.html" method="POST">
                     <p class="required"><label for="name">Name:</label>
                     <input type="text" name="name" /></p>
-    
+
                     <p class="required"><label for="email">Email:</label>
                     <input type="text" name="email" /></p>
-    
+
                     <p><label for="phone">Phone:</label>
                     <input type="text" name="phone" /></p>
 
@@ -71,13 +70,13 @@
                         <option value="feedback">Feedback</option>
                         <option value="other">Other</option>
                     </select></p>
-                   
+
                     <p><label for="info">Additional Information:</label>
                     <textarea id="info" name="info"></textarea><br/></p>
-                   
+
                     <p><span class="required">Have you been to the restaurant?</span>
                     <input type="radio" id="choice1" name="questionnaire" value="yes">
-                    <label for="choice1">Yes</label>     
+                    <label for="choice1">Yes</label>
                     <input type="radio" id="choice2" name="questionnaire" value="no" checked>
                     <label for="choice2">No</label></p>
 
@@ -93,11 +92,11 @@
                         <input type="checkbox" id="Friday" name="days" value="Friday">
                         <label for="Friday">F</label>
                     </p>
-                    
+
                     <input class="required" id="submit" type="submit" name="submit" value="Send Request">
                 </form>
             </section>
-            
+
             <footer>
                 <hr/>
                 <p>85 Bullandcow Street, Ottawa, ON - K1K 2L2</p>
@@ -105,5 +104,5 @@
                 <hr/>
             </footer>
         </main>
-    </body> 
+    </body>
 </html
