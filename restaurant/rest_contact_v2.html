@@ -5,8 +5,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Kanit:wght@500&display=swap" rel="stylesheet">
-        <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/restaurantStyles_v2.css" rel="stylesheet" type="text/css"/>
         <style>
+            section {
+                font-family: 'Helvetica', sans-serif;
+                font-size: 20px;
+            }
+
             nav {
                 border-top: 3px dashed #546a7b;
                 border-bottom: 3px dashed #546a7b;
@@ -34,10 +39,41 @@
 
             #reason {
                 background: rgb(235, 224, 213);
+                font-size: 20px;
+            }
+
+            form p {
+                padding: 15px 0px;
+            }
+
+            textarea {
+                width: 80%;
+                Height:100px;
+            }
+
+            #textinput {
+                width: 80%;
+                height:20px
+            }
+            label {
+                vertical-align: top;
+                width:20%;
             }
 
             #submit {
                 background-color: rgb(194, 137, 81);
+                color: #524007;
+                text-align: center;
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+
+            .center {
+                text-align: center;
+            }
+
+            .space {
+                padding-right: 50px;
             }
 
         </style>
@@ -52,20 +88,20 @@
             <nav>
                 <div id="item1"><a href="restaurant_index_v2.html">Home</a></div>
                 <div id="item2"><a href="rest_menu_v2.html">Menu</a></div>
-                <div id="item3"><a href="rest_contact.html">Contact Us</a></div>
+                <div id="item3"><a href="rest_contact_v2.html">Contact Us</a></div>
             </nav>
 
             <section>
                 <h1>Please fill out the form below (items in bold are required):</h1>
                 <form action="submit.html" method="POST">
                     <p class="required"><label for="name">Name:</label>
-                    <input type="text" name="name" /></p>
+                    <input id="textinput" type="text" name="name" /></p>
 
                     <p class="required"><label for="email">Email:</label>
-                    <input type="text" name="email" /></p>
+                    <input id="textinput" type="text" name="email" /></p>
 
                     <p><label for="phone">Phone:</label>
-                    <input type="text" name="phone" /></p>
+                    <input id="textinput" type="text" name="phone" /></p>
 
                     <p class="required"><label for="reason">Reason for Inquiry:</label>
                     <select id="reason" name="reason">
@@ -76,28 +112,29 @@
                     </select></p>
 
                     <p><label for="info">Additional Information:</label>
-                    <textarea id="info" name="info"></textarea><br/></p>
+                    <textarea id="info" name="info"></textarea></p>
 
                     <p><span class="required">Have you been to the restaurant?</span>
-                    <input type="radio" id="choice1" name="questionnaire" value="yes">
-                    <label for="choice1">Yes</label>
+                    <input type="radio" id="choice1" name="questionnaire" value="yes"></span>
+                    <label class="space" for="choice1">Yes</label>
                     <input type="radio" id="choice2" name="questionnaire" value="no" checked>
                     <label for="choice2">No</label></p>
 
                     <p><span class="required">Best days to contact you:</span>
                         <input type="checkbox" class="checkbox" id="monday" name="days" value="monday">
-                        <label for="monday">M</label>
+                        <label class="space" for="monday">M</label>
                         <input type="checkbox" class="checkbox" id="tuesday" name="days" value="tuesday">
-                        <label for="tuesday">T</label>
+                        <label class="space" for="tuesday">T</label>
                         <input type="checkbox" class="checkbox" id="wednesday" name="days" value="wednesday">
-                        <label for="wednesday">W</label>
+                        <label class="space" for="wednesday">W</label>
                         <input type="checkbox" class="checkbox" id="Thursday" name="days" value="Thursday">
-                        <label for="Thursday">Th</label>
+                        <label class="space" for="Thursday">Th</label>
                         <input type="checkbox" class="checkbox" id="Friday" name="days" value="Friday">
-                        <label for="Friday">F</label>
+                        <label class="space" for="Friday">F</label>
                     </p>
-
-                    <input class="required" id="submit" type="submit" name="submit" value="Send Request">
+                    <div class = "center">
+                        <input class="required" id="submit" type="submit" name="submit" value="Send Request">
+                    </div>
                 </form>
             </section>
 

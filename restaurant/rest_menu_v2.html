@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Show Grill - Menu</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Kanit:wght@500&display=swap" rel="stylesheet">
+        <link href="styles/restaurantStyles_v2.css" rel="stylesheet" type="text/css"/>
+        <style>
+            h2 {
+                font-size:20px ;
+            }
+            nav {
+                border-top: 3px dashed #546a7b;
+                border-bottom: 3px dashed #546a7b;
+                margin-top: 4px;
+            }
+            .right-content {
+                float:left;
+                width: 100%
+            }
+            section article {
+                text-align: center;
+                display: block;
+                padding:12px;
+                margin: 10px;
+            }
+
+            body {
+                background-color: rgb(223, 202, 163);
+            }
+
+            article p {
+                margin-bottom: 50px;
+                font-size: 15px
+            }
+
+            table, th {
+                border: 2px solid black;
+                border-collapse: collapse;
+                padding: 5px 10px;
+
+            }
+            table {
+                width: 60%;
+                margin: auto;
+            }
+            tr {
+                height: 30px;
+                width: 33.33%;
+                font-size: 20px;
+            }
+            th {
+                font-weight: bold;
+                font-size: 25px;
+                background-color: rgb(133, 89, 53);
+                color: #1d1c2e;
+                width: 33.33%
+
+            }
+            tbody tr:nth-child(even) {
+                background-color: rgb(211, 175, 158);
+            }
+            tbody tr:nth-child(odd) {
+                background-color: rgb(165, 142, 121);
+            }
+            #beverages {
+                margin-bottom: 50px;
+            }
+
+            #food {
+                border-top: 3px dashed #546a7b;
+                border-bottom: 3px dashed #546a7b;
+                margin: 4px;
+                font-size: 20px;
+                display: grid;
+                grid-template-columns: repeat(12,1fr);
+                text-align: center;
+            }
+            #foodrow1 {
+                grid-column: auto / span 4;
+            }
+            #foodrow2 {
+                grid-column: auto / span 4;
+            }
+
+            #price {
+                text-align: right;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <h1>Show Grill Restaurant</h1>
+            </header>
+
+            <nav>
+                <div id="item1"><a href="restaurant_index_v2.html">Home</a></div>
+                <div id="item2"><a href="rest_menu_v2.html">Menu</a></div>
+                <div id="item3"><a href="rest_contact_v2.html">Contact Us</a></div>
+            </nav>
+
+
+            <section id="food">
+
+                <article id="foodrow1">
+                    <h2><b>Burger and Fries</b></h2>
+                    <p>An American Classic!<br/>Your choice - with or without cheese<br/>Pickle, onion, tomato, and lettuce<br/>Served with our famous thick cut french fries<br/>$7.95</p>
+                </article>
+
+                <article id="foodrow1">
+                    <h2><b>Hot Dog and Chips</b></h2>
+                    <p>A Summer Classic!<br/>Your choice - white or wheat bun<br/>Relish, mustard and ketchup<br/>Served with our house-made chips<br/>$7.95</p>
+                </article>
+
+                <article id="foodrow1">
+                    <h2><b>Italian Sausage and Peppers</b></h2>
+                    <p>An All-Time Favorite!<br/>Your choice - mild or spicy Cole Slaw<br/>Served with garlic mashers<br/>$10.95</p>
+                </article>
+
+                <article id="foodrow2">
+                    <h2><b>Tenderloin Sandwich and Chips</b></h2>
+                    <p>Really Hits the Spot!<br/>Plain or Sesame Seed Bun<br/>Pickle, onion, tomato, and lettuce<br/>Served with our house-made chips<br/>$8.95</p>
+                </article>
+
+                <article id="foodrow2">
+                    <h2><b>House Salad</b></h2>
+                    <p>On the Lighter Side<br/>Your choice - with or without cheese<br/>Iceberg lettuce, tomatos, peppers<br/>Thousand Island or Ranch<br/>DressingServed with a dinner roll<br/>$6.95</p>
+                </article>
+
+                <article id="foodrow2">
+                    <h2><b>Brisket Sandwich and Fries</b></h2>
+                    <p>A Taste of Texas<br/>Smoked Brisket on thick-cut<br/>Texas Toast<br/>Cole Slaw<br/>Served with our famous thick cut french fries<br/>$7.95</p>
+                </article>
+
+            </section>
+
+            <section id="beverages">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Beverages</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Root Beer</td>
+                                <td id="price">$3.00</td>
+                            </tr>
+                            <tr>
+                                <td>Bottled Water</td>
+                                <td id="price">$1.25</td>
+                            </tr>
+                            <tr>
+                                <td>Lemonade</td>
+                                <td id="price">$1.00</td>
+                            </tr>
+                            <tr>
+                                <td>Iced Tea</td>
+                                <td id="price">$1.25</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+            </article>
+            </section>
+
+            <div class="right-content">
+                <footer>
+                    <hr/>
+                    <p>85 Bullandcow Street, Ottawa, ON - K1K 2L2</p>
+                    <p>Phone Number: 613-666-9999</p>
+                    <hr/>
+                </footer>
+            </div>
+
+        </main>
+    </body>
+</html
