@@ -1,0 +1,125 @@
+/* Form styling */
+
+/*
+Creator: Igor Dalvi
+Date created: 2021-08-09
+Date last modified: 2021-08-15
+*/
+
+footer {
+    background-color: #bb703f;
+    height: 150px;
+    text-align: center;
+    padding: 10px 10px 30px 10px;
+    margin-top: 0px;
+    font-size:18px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    font-family: 'Kanit', sans-serif;
+    color: rgb(95, 42, 42);
+    font-size: 2em;
+    vertical-align: center;
+    background-color: #bb703f;
+    height: 100px;
+    text-align: center;
+    padding: 10px 10px 60px 10px;
+    margin-top: 0px;
+}
+
+h1{
+    vertical-align: center;
+}
+
+.navV2 {
+    border-top: 3px dashed #546a7b;
+    border-bottom: 3px dashed #546a7b;
+    margin: 4px;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
+    background-color: #bd8652;
+    
+}
+
+#item1 {
+    grid-column: 3 / span 3;
+    font-size: 20px;
+    vertical-align: center;
+    
+}
+
+#item2 {
+    grid-column: auto / span 3;
+    font-size: 20px;
+    vertical-align: center;
+}
+
+#item3 {
+    grid-column: auto;
+    font-size: 20px;
+    vertical-align: center;
+}
+
+nav a {
+    background-color: #77512d;
+    color: #e0cfb8;
+    padding: 8px;
+    border: thin solid #8f7758;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 20px 20px;
+    width: 150px;
+    font-family: 'Helvetica', sans-serif;
+    border-radius: 40px;
+    box-shadow: 0 9px rgb(155, 119, 91)
+}
+
+nav a:hover {
+    background-color: #77512d;
+    color: #e0cfb8; 
+    font-weight: bold;
+}
+nav a:active {
+    background-color: #bd8652;
+    font-weight: normal;
+    color:#bb703f
+}
+nav a:visited {
+    background-color: #b66519;
+    color: #631103; 
+}
+
+.clear-float {
+    clear:both;
+}
+
+.right-content {
+    float:left;
+    width: 100%
+}
+
+.bodyV2 {
+    background-color: rgb(223, 202, 163);
+}
+
+
+.newLoc {
+    color:rgb(83, 11, 11);
+    position: relative;
+    animation-name: newLoc;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes newLoc {
+    0%   {background-color:rgb(160, 90, 10);}
+    33%  {background-color:rgb(255, 136, 0);}
+    67%  {background-color:rgb(199, 98, 16);}
+    100%  {background-color:rgb(214, 140, 29);}
+}
+
+
