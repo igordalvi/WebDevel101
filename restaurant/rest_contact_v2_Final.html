@@ -14,17 +14,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
 
-        <script>
-            function validateForm() {
-                clearErrors()
-                var x = document.forms["myForm"]["days"].value;
-                if (x == "") {
-                alert("All fields highlighted in bold must be filled out!");
-                return false;
-              }
-            }
-        </script>
+        
 
         <style>
             section {
@@ -47,14 +39,7 @@
             .required {
                 font-weight: bold;
             }
-            form input, select option, textarea {
-                background-color: rgb(235, 224, 213);
-            }
-
-            #reason {
-                background: rgb(235, 224, 213);
-                font-size: 20px;
-            }
+            
 
             form p {
                 padding: 15px 0px;
@@ -65,10 +50,7 @@
                 Height:100px;
             }
 
-            #textinput {
-                width: 75%;
-                height:25px
-            }
+        
             label {
                 vertical-align: top;
                
@@ -81,13 +63,25 @@
                 text-align: center;
                 font-size: 25px;
                 margin-bottom: 10px;
+                font-weight: bold;
             }
 
             .center {
                 text-align: center;
             }
             
+            #msg {
+                color:red;
+                font-weight: bold;
+            }
+            
+            .rounded {
+                border-radius: 5px;
+            }
 
+            #reason {
+                font-size: 20px;
+            }
           
         </style>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -106,55 +100,140 @@
                 <div class="btn" id="item3"><a href="rest_contact_v2_Final.html">Contact Us</a></div>
             </nav>
 
+            <noscript>
+                <p style="font-weight:bold; text-align: center; padding-bottom: 50px;"><span style="color:red; font-size: 40px">JavaScript is disabled in your browser!</span></br>
+                <span style="color:rgb(180, 8, 8); font-size: 20px">This site is best viewed with JavaScript enabled</span></p>
+            </noscript>
+
+
             <section class="container-fluid">
                 <div class="row">
                 <div class="col">
-                <h4><b>Please fill out the form below <b>(items in bold are required):</b></b></h4>
-                <form name="myForm" action="submit.html" method="POST">
-                    <p class="required"><label for="name">Name:</label>
-                    <input id="textinput" type="text" name="fname" /></p>
+                <h4><b>Please fill out the form below <b>(items in bold are required)</b>:</b></h4>
+ 
 
-                    <p class="required"><label for="email">Email:</label>
-                    <input id="textinput" type="text" name="email" /></p>
+                <form name="myForm" action="rest_contact_v2_Final.html" class="was-validated" method="POST">
 
-                    <p><label for="phone">Phone:</label>
-                    <input id="textinput" type="text" name="phone" /></p>
+                    <!--START OF 'NAME&EMAIL' SECTION-->
+                    <script>
+                        function validateForm() {
+                        var x = document.getElementById("uname").value;
+                        var y = document.getElementById("email").value;
+                        var z = document.getElementById("phone").value;
+                        
+                        if ((x == "" && y == "") ||(x == "") || (y == "")) {
+                            alert("FORM NOT SUBMITTED! Name and Email must be filled out");
+                        
+                        } else if (x =Number(x)) {
+                            alert("FORM NOT SUBMITTED! Name must have a valid format");
 
-                    <p class="required"><label for="reason">Reason for Inquiry:</label>
-                    <select id="reason" name="reason">
-                        <option value="default" selected>Catering</option>
-                        <option value="party">Private Party</option>
-                        <option value="feedback">Feedback</option>
-                        <option value="other">Other</option>
-                    </select></p>
+                        } if (z =isNaN(z)) {
+                            alert("FORM NOT SUBMITTED! Phone must have a valid format"); 
+                            
+                        } else {
+                            alert("YOUR DATA IS VALID AND THE FORM HAS BEEN SUBMITTED. THANKS FOR REACHING OUT!");
+                            
+                        }
+                        
+                    }
 
-                    <p><label for="info">Additional Information:</label>
-                    <textarea id="info" name="info"></textarea></p>
+                    
 
-                    <p><span class="required">Have you been to the restaurant?</span>
-                    <input type="radio" id="choice1" name="questionnaire" value="yes"></span>
-                    <label class="space" for="choice1">Yes</label>
-                    <input type="radio" id="choice2" name="questionnaire" value="no" checked>
-                    <label for="choice2">No</label></p>
+                    </script>
 
-                    <p><span class="required" id="check">Best days to contact you:</span>
-                        <input type="checkbox" class="checkbox" id="monday" name="days" value="monday">
-                        <label class="space" for="monday">M</label>
-                        <input type="checkbox" class="checkbox" id="tuesday" name="days" value="tuesday">
-                        <label class="space" for="tuesday">T</label>
-                        <input type="checkbox" class="checkbox" id="wednesday" name="days" value="wednesday">
-                        <label class="space" for="wednesday">W</label>
-                        <input type="checkbox" class="checkbox" id="Thursday" name="days" value="Thursday">
-                        <label class="space" for="Thursday">Th</label>
-                        <input type="checkbox" class="checkbox" id="Friday" name="days" value="Friday">
-                        <label class="space" for="Friday">F</label>
-                    </p>
-                    <div class = "center">
-                        <input class="required" id="submit" type="submit" name="submit" value="Send Request">
+                    <div class="form-group">
+                        <p class="required"><label for="uname">Name:</label>
+                        <input class="form-control" id="uname" type="text" name="uname" required></p>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
-                </form>
-                </div>
-                </div>
+                  
+                    <div class="form-group">
+                        <p class="required"><label for="email">Email:</label>
+                        <input class="form-control" id="email" type="text" name="email" required></p>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <!--END OF 'NAME&EMAIL' SECTION-->
+
+                    <div class="form-group">
+                        <p class="required"><label for="phone">Phone:</label>
+                        <input class="form-control" style=width:200px; id="phone" type="text" name="phone" required></p>
+                    </div>
+                            
+                    <!--START OF 'REASON FOR INQUIRY' SECTION-->
+                        <script>
+                         $(document).delegate("#select","change",function(e){
+                                if ($(this).val() === 'Other')
+                                    $('#save').attr('onclick','chk()');
+                                    
+                                else{
+                                    $('#save').removeAttr('onclick');
+                                }
+                                   
+                            });
+                            
+                         function chk()
+                         {
+                            var name=$('#name').val();
+                        
+                            if(name==""){
+                                alert("FORM NOT SUBMITTED! Please provide more details in the 'Additional Information' field.");
+                               
+                                }
+                            
+                            else {
+                                alert("YOUR DATA IS VALID AND THE FORM HAS BEEN SUBMITTED. THANKS FOR REACHING OUT!");
+                                
+                            }
+                            
+                        }
+                        
+                        </script>
+                        
+                    <div>
+                    <p><label class="required" for="reason">Reason for Inquiry:</label>
+                        <select class="rounded" name="test" id="select">
+                            <option value="">Catering</option> 
+                            <option value="B">Private Party</option>
+                            <option value="C">Feedback</option>
+                            <option value="Other">Other*</option>
+                        </select></p>
+                        
+                    <p>Additional Information: <span style="font-size: 15px;"><b>(*mandatory field if you selected <em>'Other'</em> in <em>'Reason for Inquiry'</em>)</b></span></br>                       
+                       <textarea class="rounded" type="text" name="test1" id="name" style="width:90%; height:100px;"></textarea></p> 
+                    </div>
+                    <!--END OF 'REASON FOR INQUIRY' SECTION-->       
+
+                   
+                        <div class="form-group">
+                        <p><span>Have you been to the restaurant?</span>
+                        <input type="radio" id="choice1" name="questionnaire" value="yes"></span>
+                        <label class="space" for="choice1">Yes</label>
+                        <input type="radio" id="choice2" name="questionnaire" value="no">
+                        <label for="choice2">No</label></p>
+                    </div>
+
+                    <div class="form-group">
+                        <p><span id="check">Best days to contact you:</span>
+                            <input type="checkbox" class="checkbox" id="monday" name="days" value="monday">
+                            <label class="space" for="monday">M</label>
+                            <input type="checkbox" class="checkbox" id="tuesday" name="days" value="tuesday">
+                            <label class="space" for="tuesday">T</label>
+                            <input type="checkbox" class="checkbox" id="wednesday" name="days" value="wednesday">
+                            <label class="space" for="wednesday">W</label>
+                            <input type="checkbox" class="checkbox" id="Thursday" name="days" value="Thursday">
+                            <label class="space" for="Thursday">Th</label>
+                            <input type="checkbox" class="checkbox" id="Friday" name="days" value="Friday">
+                            <label class="space" for="Friday">F</label></p>
+                    </div>
+
+                    <div class = "center">
+                        <p><input id='save' type="submit" value="Send Request" onclick="return validateForm()"/></p>
+                    </div>
+                </form> 
+
+
             </section>
 
             <footer>
@@ -165,4 +244,4 @@
             </footer>
         </main>
     </body>
-</html
+</html>
